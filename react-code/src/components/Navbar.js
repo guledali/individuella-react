@@ -12,58 +12,49 @@ const About = () => (
 
 const Navbar = () => (
   <Router>
-    <div>
-      <Bar className="navbar navbar-light  justify-content-center">
-        <Image>
-          <Pills className="nav nav-pills">
-            <li className="nav-item">
-              <Abutton className="font-weight-bold rounded-0">
-                <Linkcolor to="/home" className="normal" activeClassName="active" >Home</Linkcolor>
-              </Abutton>
-            </li>
-            <li className="nav-item">
-              <Abutton className="active font-weight-bold rounded-0">
-                <Linkcolor to="/about" className="normal" activeClassName="active" >About</Linkcolor>
-              </Abutton>
-            </li>
-          </Pills>
-        </Image>
-      </Bar>
+    <React.Fragment>
+      <Pills className="nav nav-pills">
+        <li className="nav-item">
+          <Abutton className="font-weight-bold rounded-0">
+            <Linkcolor to="/home" className="normal" activeClassName="active" >Home</Linkcolor>
+          </Abutton>
+        </li>
+        <Separtion />
+        <li className="nav-item">
+          <Abutton className="font-weight-bold rounded-0">
+            <Linkcolor to="/about" className="normal" activeClassName="active" >About</Linkcolor>
+          </Abutton>
+        </li>
+      </Pills>
       <Route path="/home" component={Home} />
       <Route path="/about" component={About} />
-    </div>
+    </React.Fragment>
   </Router>
 );
 
 export default Navbar;
 
-const Bar = styled.nav`
-     background: #f5da55; !important;
-    //  padding: 0rem !important;
-     max-height: 49px;
-`;
-
-const Image = styled.div`
-    height: 43.8px;
-    padding-top: 5px;
-`;
-
 const Pills = styled.ul`
-  display: inline-flex !important;
-  margin-left: 10px;
+  // display: inline-flex !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #f5da55 !important;
+  height: 37px;
 `;
 
 const Abutton = styled.div`
-    background #323330 !important;
-    color: #f5da55 !important;
     a:hover {
         color: #0056b3;
         text-decoration: none;
     }
  `;
 const Linkcolor = styled(NavLink)`
-    padding: 1rem !important;
-    padding-bottom: 1.19rem !important;
-    max-height: 40px !important;
+    font-size: 25px;
     text-decoration: none;
+     padding-top: 3px;
+     padding-bottom: 1.4px;
+ `;
+const Separtion = styled.span`
+      margin-left: 1%;
  `;
