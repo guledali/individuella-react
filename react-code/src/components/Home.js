@@ -13,7 +13,7 @@ const Movietitle = styled.div`
 
 class Home extends React.Component {
   state = {
-    movies: []
+    movies: [],
   }
 
   async componentDidMount() {
@@ -22,24 +22,24 @@ class Home extends React.Component {
       const movies = await res.json();
       // console.log(movies);
       this.setState({
-        movies: movies.results
-      })
-      console.log(this.state.movies)
+        movies: movies.results,
+      });
+      console.log(this.state.movies);
     } catch (e) {
       // console.log(e);
     }
   }
 
   render() {
+    const posterPath = 'http://image.tmdb.org/t/p/w154';
     return (
       <Backgroundb>
         <Movietitle className="text-center pt-5 display-3 font-weight-bold">Movie database</Movietitle>
         <div>
-        {this.state.movies.map((movie) =>
-          <h3 key={movie.id}>{movie.title}</h3>
-
-      )}
-          {/* <h3>{this.state.movies.title}</h3> */}
+          {this.state.movies.map(movie =>
+            <h3 key={movie.id}>{movie.title}</h3>)}
+          {this.state.movies.map(image =>
+            <img key={image.id} src={`${posterPath}${image.poster_path}`} />) }
         </div>
       </Backgroundb>
     );
