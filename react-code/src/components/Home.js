@@ -4,10 +4,17 @@ import styled from 'styled-components';
 
 const Backgroundb = styled.div`
     background: #323330
-    height: 100vh;
+    height: 150vh;
 `;
 const Movietitle = styled.div`
     color: #f5da55;
+`;
+
+const MovieGrid = styled.div`
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-row-gap: 1rem;
 `;
 
 
@@ -35,12 +42,12 @@ class Home extends React.Component {
     return (
       <Backgroundb>
         <Movietitle className="text-center pt-5 display-3 font-weight-bold">Movie database</Movietitle>
-        <div>
-          {this.state.movies.map(movie =>
-            <h3 key={movie.id}>{movie.title}</h3>)}
+        <MovieGrid>
+          {/* {this.state.movies.map(movie =>
+            <h3 key={movie.id}>{movie.title}</h3>)} */}
           {this.state.movies.map(image =>
-            <img key={image.id} src={`${posterPath}${image.poster_path}`} />) }
-        </div>
+            <img key={image.id} src={`${posterPath}${image.poster_path}`} alt="" />) }
+        </MovieGrid>
       </Backgroundb>
     );
   }
