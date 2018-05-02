@@ -40,7 +40,8 @@ const Pills = styled.ul`
   flex-direction: row;
   justify-content: center;
   background: #f5da55 !important;
-  height: 37px;
+  // height: 37px;
+  padding: 4px;
 `;
 
 const Abutton = styled.div`
@@ -52,8 +53,9 @@ const Abutton = styled.div`
 const Linkcolor = styled(NavLink)`
     font-size: 25px;
     text-decoration: none;
-     padding-top: 3px;
-     padding-bottom: 1.4px;
+    //  padding-top: 3px;
+    //  padding-bottom: 1.4px;
+     padding: 6px;
  `;
 const Separtion = styled.span`
       margin-left: 1%;
