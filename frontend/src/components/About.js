@@ -33,6 +33,27 @@ const Chatborder = styled.p`
     border-radius: 5px;
     width: 25%;
 `;
+const Chatarea = styled.textarea`
+    display: block;
+    margin: auto;
+    width: 25%;
+    height: 100px;
+    margin-top: 25px;
+    background: #f5da55;
+    border: 3px solid #323330 !important;
+    border-radius: 5px;
+    outline:none;
+`;
+const Chatbutton = styled.button`
+    display: block !important;
+    margin: auto;
+    width: 25%;
+    margin-top: 1.5rem;
+    color: #f5da55 !important;
+    background: #323330 !important;
+    border-color: #323330 !important;
+    outline: none;
+`;
 
 class About extends React.Component {
   render() {
@@ -43,9 +64,11 @@ class About extends React.Component {
           <Iconhome icon={faArrowDown} />
         </Backgroundhome>
         <Chatbox>
-          <Chatborder className="lead font-weight-bold p-2 mt-3">hello</Chatborder>
-          <Chatborder className="lead font-weight-bold p-2 mt-3">hello</Chatborder>
-          <Chatborder className="lead font-weight-bold p-2 mt-3">hello</Chatborder>
+          <Chatborder className="lead font-weight-bold p-2 mt-3">hello...</Chatborder>
+          <Chatborder className="lead font-weight-bold p-2 mt-3">hello...</Chatborder>
+          <Chatborder className="lead font-weight-bold p-2 mt-3">hello...</Chatborder>
+          <Chatarea rows="3" />
+          <Chatbutton type="button" className="btn btn-primary">SUBMIT</Chatbutton>
         </Chatbox>
       </React.Fragment>
     );
