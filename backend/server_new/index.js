@@ -1,18 +1,18 @@
 /* jshint esversion: 6 */
 /* jscs:disable maximumLineLength */
 
-const express = require('express');
-const mysql = require("mysql");
-const connection = mysql.createConnection({
+var express = require('express');
+var mysql = require("mysql");
+var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '',
   database : 'Portfolio'
 });
 
-const app = express();
-const port = 8080;
-const bodyParser = require('body-parser');
+var app = express();
+var port = 8080;
+var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -40,9 +40,9 @@ app.get('/comment', function (req, res) {
 });
 
 app.post('/comment', function (req, res) {
-  const query = "INSERT INTO ??(??,??) VALUES (?,?)";
-  const inserts = ['comment', 'author', 'body', req.body.author, req.body.body];
-  sql = mysql.format(query, inserts); 
+  var query = "INSERT INTO ??(??,??) VALUES (?,?)";
+  var inserts = ['comment', 'author', 'body', req.body.author, req.body.body];
+ 
   query = mysql.format(query,inserts);
   connection.query(query,function(err,rows){
     if(err) {

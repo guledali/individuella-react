@@ -16,3 +16,30 @@ body {
 ::-webkit-scrollbar { 
   display: none; 
 }
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem  rgba(0, 0, 0, 1) !important;  
+}
+/* Textarea */
+
+.textarea {
+  display: block;
+  margin: auto;
+  width: 25%;
+  height: 100px;
+  margin-top: 25px;
+  background: #f5da55;
+  border: 3px solid #323330 !important;
+  border-radius: 5px;
+  outline:none;
+}
+.input {
+  display: block;
+  margin: auto;
+  width: 25%;
+  height: 30px;
+  margin-top: 25px;
+  background: #f5da55;
+  border: 3px solid #323330 !important;
+  border-radius: 5px;
+  outline:none;
+}
