@@ -3,12 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import Home from './Home';
+import About from './About';
 
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-);
 
 const Navbar = () => (
   <Router>
