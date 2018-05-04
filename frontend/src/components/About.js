@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faArrowDown from '@fortawesome/fontawesome-free-solid/faArrowDown';
+import Message from './Message';
 
 const Backgroundhome = styled.div`
     background: #323330;
@@ -23,21 +24,21 @@ const Iconhome = styled(FontAwesomeIcon)`
 
 const Chatbox = styled.div`
     background: #f5da55;
-    height: 80vh;
+    height: 150vh;
     padding-top: 5rem;
 `;
-const Chatauthor = styled.h5`
-    display: block;
-    margin: auto;
-`;
+// const Chatauthor = styled.h5`
+//     display: block;
+//     margin: auto;
+// `;
 
-const Chatborder = styled.span`
-    display: block;
-    margin: auto;
-    border: 3px solid #323330 !important;
-    border-radius: 5px;
-    width: 25%;
-`;
+// const Chatborder = styled.span`
+//     display: block;
+//     margin: auto;
+//     border: 3px solid #323330 !important;
+//     border-radius: 5px;
+//     width: 25%;
+// `;
 // const Chatarea = styled.textarea`
 //     display: block;
 //     margin: auto;
@@ -102,11 +103,12 @@ fetching = () => {
          <Iconhome icon={faArrowDown} />
        </Backgroundhome>
        <Chatbox>
-         <Chatborder className="lead font-weight-bold p-2 mt-3">
+         <Message />
+         {/* <Chatborder className="lead font-weight-bold p-2 mt-3">
            <Chatauthor className="text-center">Michael</Chatauthor>hello...
-         </Chatborder>
-         <Chatborder className="lead font-weight-bold p-2 mt-3">hello...</Chatborder>
-         <Chatborder className="lead font-weight-bold p-2 mt-3">hello...</Chatborder>
+         </Chatborder> */}
+         {/* <Chatborder className="lead font-weight-bold p-2 mt-3">hello...</Chatborder> */}
+         {/* <Chatborder className="lead font-weight-bold p-2 mt-3">hello...</Chatborder> */}
          <form onSubmit={this.handleSubmit}>
            <input name="author" type="text" ref={this.myInput} className="input" placeholder="Name" />
            <textarea name="body" className="textarea" rows="3"ref={this.myTextarea} placeholder="Comment" />
