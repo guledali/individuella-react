@@ -28,6 +28,12 @@ class Message extends React.Component {
         .then(data => this.setState({ comments: data }));
     }
 
+    componentDidUpdate() {
+      fetch('http://localhost:8080/comment')
+        .then(response => response.json())
+        .then(data => this.setState({ comments: data }));
+    }
+
 
     render() {
       const chatMessage = this.state.comments.map((message) =>
