@@ -75,7 +75,7 @@ const Information = () => (
         <h2 className="display-1 font-weight-light">Dev</h2>
       </Gridtext>
       <Gridinfo>
-        <Gridinfotext className="text-white font-weight-regular">Hi I'm a <Gridinfospan>Javascript</Gridinfospan> and css developer primarly working in react but also enjoys php development</Gridinfotext>
+        <Gridinfotext className="text-white font-weight-regular">Hi I'm a <Gridinfospan>Javascript</Gridinfospan> and css developer primarly working in react but also enjoys php development!</Gridinfotext>
       </Gridinfo>
     </Gridbox>
   </Infoback>

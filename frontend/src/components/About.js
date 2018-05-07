@@ -24,7 +24,7 @@ const Iconhome = styled(FontAwesomeIcon)`
 
 const Chatbox = styled.div`
     background: #f5da55;
-    height: 150vh;
+    height: 1000vh;
     padding-top: 5rem;
 `;
 // const Chatauthor = styled.h5`
@@ -68,6 +68,8 @@ class About extends React.Component {
     };
 myTextarea = React.createRef();
 myInput = React.createRef();
+myForm = React.createRef();
+
 fetching = () => {
   console.log(JSON.stringify({ author: this.state.author, body: this.state.body }));
   fetch(
@@ -92,6 +94,7 @@ fetching = () => {
      body: this.myTextarea.current.value,
    });
    this.fetching();
+   this.myForm.current.reset();
  }
 
 
@@ -109,7 +112,7 @@ fetching = () => {
          </Chatborder> */}
          {/* <Chatborder className="lead font-weight-bold p-2 mt-3">hello...</Chatborder> */}
          {/* <Chatborder className="lead font-weight-bold p-2 mt-3">hello...</Chatborder> */}
-         <form onSubmit={this.handleSubmit}>
+         <form onSubmit={this.handleSubmit} ref={this.myForm} >
            <input name="author" type="text" ref={this.myInput} className="input" placeholder="Name" />
            <textarea name="body" className="textarea" rows="3"ref={this.myTextarea} placeholder="Comment" />
            <Chatbutton type="submit" className="btn btn-primary">SUBMIT</Chatbutton>

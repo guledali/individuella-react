@@ -13,13 +13,13 @@ const Navbar = () => (
       <Pills className="nav nav-pills">
         <li className="nav-item">
           <Abutton className="font-weight-bold rounded-0">
-            <Linkcolor to="/home" className="normal" activeClassName="active" >Home</Linkcolor>
+            <Linkcolor to="/home" className="normal" activeClassName="active" >Movie</Linkcolor>
           </Abutton>
         </li>
         <Separtion />
         <li className="nav-item">
           <Abutton className="font-weight-bold rounded-0">
-            <Linkcolor to="/about" className="normal" activeClassName="active" >About</Linkcolor>
+            <Linkcolor to="/about" className="normal" activeClassName="active" >Chat</Linkcolor>
           </Abutton>
         </li>
       </Pills>
