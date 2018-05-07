@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Backgroundb = styled.div`
     background: #323330
-    height: 150vh;
+    height: 1000vh;
 `;
 const Movietitle = styled.div`
     color: #f5da55;
@@ -13,10 +13,17 @@ const Movietitle = styled.div`
 const MovieGrid = styled.div`
   display: grid;
   padding: 1rem;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   // grid-row-gap: 1rem;
   grid-gap: 1rem;
-  margin-left: 2.5rem;
+  margin-left: 3.5rem;
+
+  @media (max-width: 900px) {
+     grid-template-columns: repeat(3, 1fr);
+}
+  @media (max-width: 600px) {
+     grid-template-columns: repeat(2, 1fr);
+}
 `;
 
 
@@ -27,6 +34,10 @@ const Moviebutton = styled.button`
   background: #f5da55 !important;
   border: #f5da55 !important;
   color: #323330 !important;
+
+  @media (max-width: 700px) {
+    width: 30% !important;
+}
 `;
 
 
