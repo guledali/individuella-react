@@ -34,6 +34,36 @@ const Gridtext = styled.div`
       }
 `;
 
+const Gridinfo = styled.div`
+    grid-column-start: 4;
+    grid-column-end: span 6;
+    border 3px solid #f5da55 !important;
+    height: 200px;
+    padding: 3rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+
+        
+    @media (max-width: 768px) {
+        grid-column-start: 2;
+        grid-column-end: span 10;
+      }
+`;
+const Gridinfotext = styled.h3`
+    @media (max-width: 865px) {
+        font-size: 1.55rem;
+    }
+    @media (max-width: 545px) {
+        font-size: 25px;
+      }
+    @media (max-width: 500px) {
+        font-size: 20px;
+      }
+`;
+const Gridinfospan = styled.span`
+      color: #f5da55;
+`;
+
 
 const Information = () => (
   <Infoback>
@@ -44,6 +74,9 @@ const Information = () => (
         <p className="display-3 font-weight-regular text-white">Guled Abdikarim Ali</p>
         <h2 className="display-1 font-weight-light">Dev</h2>
       </Gridtext>
+      <Gridinfo>
+        <Gridinfotext className="text-white font-weight-regular">Hi I'm a <Gridinfospan>Javascript</Gridinfospan> and css developer primarly working in react but also enjoys php development</Gridinfotext>
+      </Gridinfo>
     </Gridbox>
   </Infoback>
 );
