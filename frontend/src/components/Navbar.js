@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
+import Information from './Information';
 
 
 const Navbar = () => (
@@ -22,6 +23,7 @@ const Navbar = () => (
           </Abutton>
         </li>
       </Pills>
+      <Route exact path="/" component={Information} />
       <Route path="/home" component={Home} />
       <Route path="/about" component={About} />
     </React.Fragment>
